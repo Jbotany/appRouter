@@ -4,7 +4,7 @@
     <input name="user-firstname" type="text" [(ngModel)]="model.firstname" #firstname="ngModel" minlength="3" maxlength="15" required />
     <div *ngIf="myForm.submitted && firstname.errors">
       <span *ngIf="firstname.errors?.required">Le prénom est requis</span>
-      <span *ngIf="firstname.errors.minlength">Le prénom doit comporter au moins 3 caractères</span>
+      <span *ngIf="firstname.errors?.minlength">Le prénom doit comporter au moins 3 caractères</span>
       <span *ngIf="firstname.errors?.maxlength">Le prénom ne doit pas dépasser 15 caractères</span>
     </div>
   </div>
